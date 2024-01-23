@@ -14,6 +14,8 @@
     android:text="Commute"
     android:textSize="16sp"/>
 
+
+
     <FrameLayout
         android:id="@+id/cameraPreview"
         android:layout_width="match_parent"

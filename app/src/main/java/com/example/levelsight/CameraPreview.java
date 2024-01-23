@@ -34,6 +34,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
     }
 
 
+
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         if (mCamera != null) {
