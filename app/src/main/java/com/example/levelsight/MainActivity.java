@@ -9,20 +9,32 @@ import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback{
 
     private Camera mCamera;
     private CameraPreview mPreview;
 
     Button captureButton;
 
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+
+
 
 
 //        mCamera = getCameraInstance();
@@ -48,6 +60,14 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this, "Failed to open camera", Toast.LENGTH_SHORT).show();
         }
     }
+
+
+    @Override
+    public void onMapReady(GoogleMap googleMap) {
+        // add map pointers etc
+    }
+
+
 
     // Camera initialization method
     // Camera initialization method
