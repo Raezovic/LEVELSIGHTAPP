@@ -5,11 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
+
+
 <Button
     android:id="@+id/captureButton"
     android:layout_width="200dp"
     android:layout_height="50dp"
-    android:layout_marginTop="600dp"
+    android:layout_marginTop="650dp"
     android:layout_centerHorizontal="true"
     android:text="Commute"
     android:textSize="16sp"/>
@@ -19,7 +21,25 @@
     <FrameLayout
         android:id="@+id/cameraPreview"
         android:layout_width="match_parent"
-        android:layout_height="590dp"/>
+        android:layout_height="530dp"
+        android:layout_marginTop="65dp">
+    </FrameLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        app:boxCornerRadiusTopEnd="10dp"
+        app:boxCornerRadiusBottomStart="10dp"
+        app:boxCornerRadiusBottomEnd="10dp"
+        app:boxCornerRadiusTopStart="10dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/location_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter location" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </RelativeLayout>
