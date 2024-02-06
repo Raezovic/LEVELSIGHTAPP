@@ -18,9 +18,9 @@
         android:id="@+id/voiceAssistantButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Voice Assistant"
+        android:layout_below="@+id/navigateButton"
         android:layout_centerInParent="true"
-        android:layout_below="@+id/navigateButton"/>
+        android:text="Start Voice Assistant" />
 
 
     <FrameLayout
@@ -36,7 +36,7 @@
         android:id="@+id/map"
         android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="150dp"
-        android:layout_height="95dp"
+        android:layout_height="150dp"
         android:layout_toRightOf="@id/location_box"
        />
 
@@ -48,7 +48,6 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/location_input"
-            android:contentDescription=""
             android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:hint="Enter Location" />
